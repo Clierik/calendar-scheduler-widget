@@ -1,0 +1,56 @@
+.cellArr {
+  background-color: white;
+  border: 1px solid brown;
+  width: 98px;
+  height: 598px;
+  overflow: hidden;
+
+  .arrCell {
+
+    div {
+      display: flex;
+      align-items: center;
+
+      p {
+        font-size: 10px;
+        margin: 3px;
+        padding: 0;
+      }
+    }
+  }
+
+  .cellWrapper {
+    padding: 0 10px;
+  }
+
+  .shadowTop {
+    -webkit-box-shadow: 0px -10px 16px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -10px 16px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -10px 16px -9px rgba(0, 0, 0, 0.75);
+  }
+
+  .shadowBottom {
+    -webkit-box-shadow: 0px 10px 16px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 16px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 16px -9px rgba(0, 0, 0, 0.75);
+  }
+
+  .arrCell:hover {
+    background-color: whitesmoke;
+  }
+
+  .red {
+    color: red;
+  }
+
+  .activeEvent {
+    border-top: 1px solid brown;
+    border-bottom: 1px solid brown;
+  }
+
+  .passiveEvent {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+  }
+
+}

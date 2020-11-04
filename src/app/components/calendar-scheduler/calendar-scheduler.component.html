@@ -1,0 +1,24 @@
+<body #wrapper 
+      class="cellArr" 
+      (wheel)="cellWrapperZoomControl()">
+  <div #cell 
+      class="arrCell" 
+      *ngFor="let event of eventsArr; let i = index" 
+      [style.height.%]="cellAdjustedProportion"
+      (click)="setActiveEvent(event.dateString, event.dayType); provideVariableChech(event.dateString, event.dayType)"
+      [ngClass]="{'activeEvent': event.dateString === activeDate, 
+                  'passiveEvent': event.dateString != activeDate,
+                  'shadowTop': event.dateString === startOfWeek, 
+                  'shadowBottom': event.dateString === endOfWeek}">
+    <div class="cellWrapper">      
+      <p [ngClass]="{'red': event.dayType === 'Sun'}">
+        {{event.dateString}}
+      </p>
+      <p *ngIf="event.dateString != activeDate && 
+                (event.dateString === startOfWeek || 
+                event.dateString === endOfWeek)">
+        {{event.dayType}}
+      </p>
+    </div>
+  </div>
+</body>
