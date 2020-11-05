@@ -1,5 +1,5 @@
 export class EventOfView {
     date: any;
-    dateString: string;
+    dateString: number;
     dayType: string;
 }

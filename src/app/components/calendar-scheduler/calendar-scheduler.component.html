@@ -5,9 +5,9 @@
       class="arrCell" 
       *ngFor="let event of eventsArr; let i = index" 
       [style.height.%]="cellAdjustedProportion"
-      (click)="setActiveEvent(event.dateString, event.dayType); provideVariableChech(event.dateString, event.dayType)"
+      (click)="setActiveEvent(event.dateString, event.dayType); provideVariableCheck(event.dateString, event.dayType)"
       [ngClass]="{'activeEvent': event.dateString === activeDate, 
-                  'passiveEvent': event.dateString != activeDate,
+                  'passiveEvent': event.dateString !== activeDate,
                   'shadowTop': event.dateString === startOfWeek, 
                   'shadowBottom': event.dateString === endOfWeek}">
     <div class="cellWrapper">      
